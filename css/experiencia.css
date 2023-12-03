@@ -1,0 +1,142 @@
+.experiencia {
+  max-width: 1200px;
+  padding: 60px 40px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 180px;
+}
+
+.experiencia .subtitulo {
+  color: #ededed;
+}
+
+.experiencia .descricao p {
+  color: #474d59;
+  margin-top: 46px;
+  margin-bottom: 56px;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.experiencia .descricao strong {
+  color: #232831;
+}
+
+.empresa {
+  position: relative;
+  padding: 20px;
+  background: #f9f9f9;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 30px;
+  border: 1px solid #ededed;
+}
+
+.empresa::before {
+  content: "";
+  display: block;
+  height: 16px;
+  width: 4px;
+  background-image: linear-gradient(#1f93ff, #0563bb);
+  position: absolute;
+  left: -5px;
+  top: 26px;
+  border-radius: 1px;
+}
+
+.empresa-ano {
+  position: absolute;
+  left: -100px;
+  top: 25px;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  color: #474d59;
+}
+
+.empresa-titulo {
+  font-size: 1.25rem;
+  font-family: "Playfair Display";
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.empresa-texto {
+  max-width: 335px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #474d59;
+}
+
+.empresa-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  align-content: start;
+}
+
+.experiencia ul li {
+  padding: 5px 10px;
+  background: #ffffff;
+  margin: 4px;
+  border-radius: 5px;
+  align-self: self-start;
+  align-content: start;
+}
+
+@media (max-width: 1200px) {
+  .experiencia {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-row: auto;
+  }
+
+  .experiencia .subtitulo {
+    color: #232831;
+    align-items: center;
+    margin: 0px;
+  }
+
+  .experiencia .descricao p {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+
+  .experiencia .empresa {
+    max-width: 800px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .experiencia .empresa .empresa-ano {
+    position: initial;
+    display: block;
+    order: 1;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .experiencia {
+    padding-top: 0px;
+    gap: 5px;
+  }
+  .experiencia .subtitulo {
+    font-size: 2rem;
+  }
+  .experiencia .descricao p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  .experiencia .empresa {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .experiencia .empresa .empresa-titulo {
+    font-size: 1.1rem;
+  }
+}

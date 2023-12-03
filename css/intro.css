@@ -1,0 +1,72 @@
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 120px;
+  align-items: center;
+}
+
+.intro h1 {
+  font-family: "Playfair Display";
+  font-size: 3rem;
+  line-height: 1.125;
+  font-weight: 700;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.intro h1::before {
+  content: "";
+  display: block;
+  width: 85px;
+  height: 100px;
+  background: url(../imagens/det.svg) no-repeat center;
+  position: absolute;
+  left: -20px;
+  top: -30px;
+  z-index: -1;
+}
+
+.intro p {
+  font-size: 1.25rem;
+  color: #474d59;
+}
+
+@media (max-width: 900px) {
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+  .intro {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 700px) {
+  .intro {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  .intro h1 {
+    font-size: 2rem;
+  }
+  .intro p {
+    font-size: 0.8rem;
+  }
+  .intro h1::before {
+    height: 10px;
+    width: 30px;
+    left: 0px;
+    top: -10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro img {
+    display: none;
+  }
+  .intro {
+    grid-template-columns: 1fr;
+  }
+}
